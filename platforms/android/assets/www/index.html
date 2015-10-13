@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jQuery/jquery.mobile-1.4.5.min.css"/>
+		<script type="text/javascript" src="jQuery/jquery-2.1.4.min.js"></script>	
+				
+		<script>
+			$(document).bind('mobileinit',function(){
+			$.mobile.changePage.defaults.changeHash = false;
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
+			});
+		</script>
+		<script type="text/javascript" src="jQuery/jquery.mobile-1.4.5.min.js"></script>	
+		<script type="text/javascript" src="js/database.js"></script>
+		
+		<script>
+			$("#mypanel").panel("open",optionsHash);
+		</script>
+		
+		
+        <title>Calculadora Tormenta RPG</title>
+    </head>
+    <body onload>
+        <div data-role="page">
+			<div data-role="header">
+				<a href="#mypanel"><img src="jQuery\images\icons-png\bars-black.png"></img></a><h1>Informações Básicas</h1>
+			</div>
+			<div data-role="panel" id="mypanel">
+				<a href="#" class="ui-btn">Informações Básicas</a>
+				<a href="#" class="ui-btn">Classes</a>
+				<a href="#" class="ui-btn">Talentos</a>
+				<a href="#" class="ui-btn">Habilidades</a>
+				<a href="#" class="ui-btn">Perícias</a>
+			</div>
+			<div role="main" class="ui-content">
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><label for="text-basic">Força</label></div><div class="ui-block-b"><input type="text" name="text-basic" 
+					id="text-basic" value="" maxlength="3" size="4" ></div>
+					
+					<div class="ui-block-a"><label for="text-basic">Destreza</label></div><div class="ui-block-b"><input type="text" name="text-basic" 
+					id="text-basic" value="" maxlength="3" size="4" ></div>
+					
+					<div class="ui-block-a"><label for="text-basic">Constituição</label></div><div class="ui-block-b"><input type="text" name="text-basic" 
+					id="text-basic" value="" maxlength="3" size="4"></div>
+					
+					<div class="ui-block-a"><label for="text-basic">Inteligencia</label></div><div class="ui-block-b"><input type="text" name="text-basic" 
+					id="text-basic" value="" maxlength="3" size="4"></div>
+					
+					<div class="ui-block-a"><label for="text-basic">Sabedoria</label></div><div class="ui-block-b"><input type="text" name="text-basic" 
+					id="text-basic" value="" maxlength="3" size="4"></div>
+					
+					<div class="ui-block-a"><label for="text-basic">Carisma</label></div><div class="ui-block-b"><input type="text" name="text-basic"
+					id="text-basic" value="" maxlength="3" size="4"></div>
+					
+					<div class="ui-block-a"><label for="text-basic">Pontos Restantes</label></div><div class="ui-block-b"><label for="text-basic">Valor Y</label></div>
+					
+					<div class="ui-block-a"><label for="text-basic">CA</label></div><div class="ui-block-b"><label for="text-basic">Valor X</label></div>
+					
+					<div class="ui-block-a"><label for="text-basic">PV</label></div><div class="ui-block-b"><label for="text-basic">Valor Z</label></div>			
+				</div>
+			</div>		
+			<div data-role="footer">
+				<h4>Marotão</h4>
+			</div>
+		</div>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
